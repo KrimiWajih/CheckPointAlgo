@@ -1,0 +1,27 @@
+ALGORITHM algorithm_name
+VAR
+    a,b,x:INTEGER
+    Tableau_voy : ARRAY_OF char:={"a","e","i","y","o","u"};
+    num_voy:INTEGER
+    num_chaine:INTEGER
+    long_chaine:INTEGER
+    str:STRING;
+    num_voy:=0;
+
+BEGIN
+    read(str);
+    long_chaine:=str.length;
+
+    FOR i FROM 0 TO long_chaine-1 STEP 1  DO
+        IF(str[i] in Tableau_voy)  THEN   
+                num_voy:=num_voy+1;
+        
+        IF((str[i]=" ") or (str[i]=".")) THEN
+                num_chaine:=num_chaine+1
+               
+    END_FOR
+    write("Number of Vowel is : " num_voy )
+    write("Number of words is : " num_chaine )
+    write("Lenght of chaine is :" long_chaine )
+
+END
